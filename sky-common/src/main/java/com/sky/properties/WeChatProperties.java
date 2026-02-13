@@ -1,12 +1,10 @@
 package com.sky.properties;
-
-import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import lombok.Data;// 正确导入
 
-@Component
-@ConfigurationProperties(prefix = "sky.wechat")
+@Component  // 去掉前面的包名，直接用 @Component
+@ConfigurationProperties(prefix = "sky.wechat")  // 去掉前面的包名
 @Data
 public class WeChatProperties {
 
