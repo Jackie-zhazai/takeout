@@ -94,4 +94,8 @@ public PageResult pageQuery( EmployeePageQueryDTO employeePageQueryDTO){
 
     return new PageResult(total,records);
 }
+public void startOrStop(Integer status,Long id){
+    Employee employee=Employee.builder().status(status).id(id).build();
+    employeeMapper.update(employee);
+}
 }
